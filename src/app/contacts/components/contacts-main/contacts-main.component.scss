@@ -1,0 +1,23 @@
+@import '~src/variables.scss';
+@import '~src/mixins.scss';
+
+
+.contacts-container {
+  @include wrapper($wrapperWidth);
+  padding: 41px 51px 37px 93px;
+
+  .contacts-cards {
+
+  }
+
+  .paginator-block {
+
+  }
+
+  &-list {
+
+    &__item {
+
+    }
+  }
+}

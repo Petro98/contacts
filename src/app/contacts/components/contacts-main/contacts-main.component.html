@@ -1,0 +1,31 @@
+<app-contacts-header></app-contacts-header>
+<div class="contacts-container">
+	<app-contacts-filter></app-contacts-filter>
+	<div class="contacts-cards">
+		<app-contact-card *ngFor="let contact of contacts | async" [contact]="contact"></app-contact-card>
+	</div>
+	<div class="paginator-block">
+		<ul class="paginator-block-list">
+			<li class="paginator-block-list__item">
+				<button type="button" class="paginator-block-list__button paginator-block-list__button_active">1</button>
+			</li>
+			<li class="paginator-block-list__item">
+				<button type="button" class="paginator-block-list__button">2</button>
+			</li>
+			<li class="paginator-block-list__item">
+				<button type="button" class="paginator-block-list__button">3</button>
+			</li>			
+			<li class="paginator-block-list__item">
+				<button type="button" class="paginator-block-list__button">4</button>
+			</li>
+			<li class="paginator-block-list__item">
+				<button type="button" class="paginator-block-list__button">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10.217 13.2855L13.9586 9.57098L10.217 5.80242" stroke="currentColor" stroke-width="1.28"/>
+						<path d="M5.54008 9.54394H13.0232" stroke="currentColor" stroke-width="1.28"/>
+					</svg>
+				</button>
+			</li>		
+		</ul>	
+	</div>
+</div>

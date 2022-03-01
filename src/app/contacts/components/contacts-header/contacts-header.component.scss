@@ -1,0 +1,9 @@
+@import '~src/variables.scss';
+
+.contacts-header {
+  height: 8vh;
+  width: 100%;
+  max-width:1920px;
+  min-width: 320px;
+  border-bottom: 3px solid $colorGrey;
+}

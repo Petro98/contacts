@@ -1,0 +1,39 @@
+@import '~src/variables.scss';
+
+
+.contacts-filter {
+  &-form {
+    height: 28px;
+    border: 1px solid $colorGrey;
+    border-radius: 15px;
+
+    &__container {
+      width: 100%;
+      padding: 0 5px;
+    }
+
+
+    &__select {
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    &__btn {
+      svg {
+        color: $colorDarkGrey;
+      }
+    }
+  }
+
+  &-form div:last-child {
+    border-left: 2px solid $colorGrey;
+  }
+
+  &-form div:first-child {
+    width: 60%;
+  }
+
+}
