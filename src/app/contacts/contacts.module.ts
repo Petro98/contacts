@@ -5,6 +5,7 @@ import { ContactsFilterComponent } from './components/contacts-filter/contacts-f
 import { ContactsMainComponent } from './components/contacts-main/contacts-main.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { ContactsRoutingModule } from './contacts-routing.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -15,9 +16,11 @@ import { ContactsRoutingModule } from './contacts-routing.module';
 		ContactsMainComponent,
 		ContactCardComponent
 	],
-	imports: [
-		CommonModule,
-		ContactsRoutingModule
-	]
+  imports: [
+    CommonModule,
+    ContactsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ]
 })
 export class ContactsModule { }

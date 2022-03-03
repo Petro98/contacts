@@ -1,0 +1,50 @@
+@import '~src/variables.scss';
+@import '~src/mixins.scss';
+
+
+@mixin cardText($sizeCard : 12px , $colorCard: $colorLightgrey) {
+  font-size: $sizeCard;
+  line-height: 14px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  color: $colorCard;
+}
+
+.contact-card {
+  align-items: flex-start;
+
+  &__image {
+    background-position: 50%;
+    background-size: 100% 100%;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+
+    margin-right: 28px;
+  }
+
+  &__content {
+
+  }
+
+  &__header {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__container {
+    div {
+      margin: 2px 0;
+    }
+  }
+
+  &__organization, &__department, &__position {
+    @include cardText
+  }
+
+  &__phone, &__email {
+    @include cardText(12px, $colorDark)
+  }
+
+}

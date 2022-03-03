@@ -4,14 +4,64 @@
 
 .contacts-container {
   @include wrapper($wrapperWidth);
-  padding: 41px 51px 37px 93px;
+  padding: 4vh 51px 3vh 51px;
+  background-color: $colorWhite;
+
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+
+  @include _768 {
+    padding: 4vh 5px 3vh 5px;
+    margin:5px
+  }
 
   .contacts-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
+    app-contact-card {
+      margin: 1vh 0;
+      width: 30%;
+      min-width:306px;
+    }
   }
 
   .paginator-block {
+    margin-top: 40px;
 
+    &-list {
+      &__item {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1.3px solid $colorDarkGrey;
+
+        margin: 0 8px;
+        @include flex-c-c
+      }
+
+      &__item:hover {
+        border-color: $colorPurple;
+
+        button {
+          transition: $transition ease-out;
+          color: $colorPurple;
+        }
+
+        transition: $transition ease-out;
+      }
+
+      &__button {
+        color: $colorDarkGrey;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
   }
 
   &-list {
@@ -19,5 +69,15 @@
     &__item {
 
     }
+  }
+  .paginator-block-list__button_active{
+    border-color: $colorPurple;
+
+    button {
+      transition: $transition ease-out;
+      color: $colorPurple;
+    }
+
+    transition: $transition ease-out;
   }
 }

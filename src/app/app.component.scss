@@ -1,5 +1,12 @@
+@import '~src/mixins.scss';
+
 .body-container {
+  height: 100vh;
   width: 100%;
   max-width: 1920px;
+  min-width: 320px;
   padding: 0 24px 23px;
+@include _768{
+  padding: 0 5px 23px;
+}
 }
